@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="main">
+        <div class="cards">
+            <div class="leftBudget">
+                <p>Budget Left</p>
+                <h1 class="leftBudgetAmount">$0</h1>
+            </div>
+            <div class="TotalBudget">
+                <p>Total Budget</p>
+                <h1 class="totalBudgetAmount">$0</h1>
+            </div>
+            <div class="totalExpense">
+                <p>Total Expenses</p>
+                <h1 class="totalExpenseAmount">$0</h1>
+            </div>
+        </div>
+        
+        <div class="history">
+            <h1><i class="fas fa-history"></i> Expense History</h1>
+            <div class="histContent">
+                <div class="empty-state">
+                    No expenses recorded yet. Add your first expense below!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="expenses">
+            <div class="header">
+                <div class="tab active"><i class="fas fa-minus-circle"></i> Add Expense</div>
+            </div>
+            <div class="form-section">
+                <label for="expenseAmount">Amount ($)</label>
+                <input type="number" id="expenseAmount" class="expenseAmount" placeholder="Enter expense amount" step="0.01" min="0">
+                
+                <label for="expenseCategory">Category</label>
+                <input type="text" id="expenseCategory" class="expenseCategory" placeholder="e.g., Food, Transport, Entertainment">
+            </div>
+            <div class="buttons-row">
+                <button class="btn addExpense"><i class="fas fa-plus"></i> Add Expense</button>
+                <button class="btn Expenseclear"><i class="fas fa-times"></i> Clear</button>
+            </div>
+        </div>
+        
+        <div class="budget">
+            <div class="header">
+                <div class="tab active"><i class="fas fa-wallet"></i> Set Budget</div>
+            </div>
+            <div class="form-section">
+                <label for="budgetAmount">Budget Amount ($)</label>
+                <input type="number" id="budgetAmount" class="budgetAmount" placeholder="Enter your budget" step="0.01" min="0">
+            </div>
+            <div class="buttons-row">
+                <button class="btn AddBudget"><i class="fas fa-plus"></i> Set Budget</button>
+                <button class="btn Budgetclear"><i class="fas fa-times"></i> Clear</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
